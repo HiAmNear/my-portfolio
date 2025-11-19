@@ -1,0 +1,30 @@
+{
+  "research": {
+    "title_page": "Kinh Nghiệm Nghiên Cứu",
+    "technologies-used" : "Công Nghệ Áp Dụng",
+    "groups": {
+      "pipeline": "Đường ống Dữ liệu & Công cụ",
+      "model_deploy": "Mô hình & Triển khai (Dự kiến)",
+      "llm_validation": "LLM APIs & Kiểm chứng",
+      "benchmark": "Kiểm chuẩn Mô hình"
+    },
+    "soiea": {
+      "title": "SoIEA: Phân tích Cảm xúc Ngầm Xã hội (Đang thực hiện)",
+      "desc_1": "Phát triển phiên bản nâng cao của dự án ViISA để phân tích cảm xúc ngầm trong ngữ cảnh mạng xã hội động, cụ thể là YouTube.",
+      "desc_2": "Xây dựng đường ống dữ liệu mới để thu thập và xử lý bình luận từ tập dữ liệu chọn lọc gồm hơn 500 kênh YouTube Việt Nam.",
+      "desc_3": "Trọng tâm hiện tại là huấn luyện và kiểm chuẩn các mô hình trên tập dữ liệu bình luận YouTube quy mô lớn này.",
+      "desc_4": "Mục tiêu cuối cùng là mở rộng hệ thống để dự đoán cảm xúc ngầm theo thời gian thực trong các buổi livestream trên YouTube."
+    },
+    "viisa": {
+      "title": "ViISA: Một chuẩn đánh giá mới cho Phân tích Cảm xúc Ngầm tiếng Việt",
+      "date": "12/2024 - 7/2025",
+      "desc_1": "Tác giả chính của bộ dữ liệu ViISA (<a href='https://huggingface.co/HiAmNear/ViISA' target='_blank' class='url-text hover'>Hugging Face: HiAmNear/ViISA</a>), một tài nguyên mới lạ cho phân tích cảm xúc ngầm tiếng Việt.",
+      "desc_2": "Xây dựng đường ống dữ liệu để thu thập tin tức (tuoitre.com), thực hiện phân đoạn ngữ nghĩa (dùng underthesea) và lọc ứng viên.",
+      "desc_3": "Phát triển quy trình gán nhãn đa giai đoạn hỗ trợ bởi AI sử dụng LLMs (ví dụ: GPT-4, Gemini-Flash) để chú thích hơn 9.000 mẫu dữ liệu.",
+      "desc_4": "Kiểm chứng chất lượng gán nhãn và độ đồng thuận giữa các người gán nhãn bằng chỉ số Cohen's Kappa trước khi gán nhãn quy mô lớn.",
+      "desc_5": "Kiểm chuẩn bộ mô hình (từ BiLSTM đến PhoBERT) trên tập dữ liệu, đánh giá hiệu suất bằng các chỉ số chính như Macro F1 (MF1), Weighted F1 (WF1) và Accuracy.",
+      "desc_6": "Nghiên cứu này đã được hoàn thiện thành bản thảo và trải qua vòng đánh giá ban đầu tại <strong>Hội nghị AAAI 2025</strong>."
+    }
+  },
+  "present":"Hiện Tại"
+}

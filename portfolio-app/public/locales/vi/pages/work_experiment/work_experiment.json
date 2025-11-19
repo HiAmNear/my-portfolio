@@ -1,0 +1,49 @@
+{
+  "work": {
+    "title_page": "Kinh Nghiệm Làm Việc",
+    "technologies-used": "Công Nghệ Áp Dụng",
+    "nia": {
+      "company": "Startup: NiaColor - Nền tảng Thương mại điện tử",
+      "date": "07/2025 - {{now}}",
+      "role": "Nhà sáng lập & Lập trình viên chính",
+      "roles": {
+        "lead_p1": "Dẫn dắt quá trình phát triển toàn diện (end-to-end) một nền tảng thương mại điện tử full-stack (đang phát triển) cho doanh nghiệp kinh doanh tượng thạch cao.",
+        "lead_p2": "<strong>Hoàn thành (Giai đoạn 1):</strong> Xây dựng toàn bộ Frontend (FE) hướng tới khách hàng sử dụng ReactJS và SCSS, tập trung vào trải nghiệm người dùng tương thích (responsive).",
+        "lead_p3": "<strong>Hoàn thành (Giai đoạn 1):</strong> Triển khai hỗ trợ đa ngôn ngữ sử dụng `react-i18next`.",
+        "lead_p4": "<strong>Hoàn thành (Giai đoạn 1):</strong> Thiết kế kiến trúc hệ thống Backend hoàn chỉnh, bao gồm đặc tả API và lược đồ cơ sở dữ liệu PostgreSQL.",
+        "lead_p5": "<strong>Đang thực hiện (Giai đoạn 2):</strong> Triển khai Backend (sử dụng Go) và phát triển trang quản trị (CRM, phân tích) là những cột mốc quan trọng tiếp theo."
+      },
+      "groups": {
+        "fe": "Frontend (Đã hoàn thành)",
+        "be": "Backend (Kiến trúc & Kế hoạch)"
+      }
+    },
+    "mec": {
+      "date": "5/2023 - 7/2025",
+      "role": "Kỹ sư Phần mềm",
+      "roles": {
+        "dev_title": "Phát triển Ứng dụng Web",
+        "dev_p1": "Chịu trách nhiệm phát triển và bảo trì các ứng dụng web cho cả backend và frontend.",
+        "dev_p2": "Đảm bảo hiệu năng và khả năng mở rộng.",
+        "dev_p3": "Tinh chỉnh và tối ưu hóa mã nguồn để nâng cao hiệu suất ứng dụng.",
+        "dev_p4": "Phối hợp với các nhóm chức năng chéo (thiết kế, UX và QA) để đáp ứng thời hạn dự án, đảm bảo sản phẩm được bàn giao đúng tiến độ trong từng giai đoạn của quy trình Waterfall.",
+        
+        "test_title": "Kiểm thử Ứng dụng Web",
+        "test_p1": "Tạo danh sách kiểm tra chi tiết và các trường hợp kiểm thử (test cases) để đảm bảo bao phủ toàn diện chức năng ứng dụng.",
+        "test_p2": "Tài liệu hóa hành vi chương trình từng bước để theo dõi và xác nhận kết quả mong đợi.",
+        "test_p3": "Phát triển và duy trì các kịch bản kiểm thử tự động sử dụng Robot Framework.",
+        "test_p4": "Hợp tác với đội ngũ phát triển để xác định, báo cáo và xác minh lỗi phần mềm.",
+
+        "vba_title": "Hỗ trợ Bảo trì Hệ thống VBA",
+        "vba_p1": "Hợp tác tối ưu hóa mã nguồn VBA và xây dựng lại giao diện người dùng kiểu Access trong VBA.",
+        "vba_p2": "Điều chỉnh các hàm VBA để tương thích với Visual Basic.",
+        "vba_p3": "Bảo trì mã nguồn Visual Basic để hỗ trợ quá trình chuyển đổi từ Internet Explorer sang Microsoft Edge.",
+        "vba_p4": "Sử dụng công cụ độc quyền của HOS.net (cho .NET) để hỗ trợ bảo trì hệ thống.",
+
+        "ai_title": "Dự án AI: Nhận diện Biển số xe Nhật Bản",
+        "ai_p1": "Phát triển hệ thống nhận diện biển số xe sử dụng kết hợp OpenCV và CNN."
+      }
+    }
+  },
+  "present":"Hiện Tại"
+}

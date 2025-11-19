@@ -1,0 +1,31 @@
+{
+  "overview": {
+    "basicInfo": {
+      "title": "Basic Information",
+      "name" : "Full Name",
+      "private-name" : "Mã Hải Nhật",
+      "location-title" : "Location",
+      "location": "Ho Chi Minh City"
+    },
+    "skills": {
+      "title": "Skills",
+      "core": "Core Technologies",
+      "ai": "AI & NLP",
+      "data-engineering": "Data Engineering & Big Data",
+      "web": "Web Frameworks & Tools"
+    },
+    "edu": {
+      "title": "Education",
+      "nature_language": "Nature Language",
+      "jp_n3": "Japanese (JLPT N3)",
+      "english": "English",
+      "vietnamese": "Vietnamese",
+      "master_level": "Master's Degree",
+      "bachelor_level": "Bachelor's Degree",
+      "school_uit": "University of Information Technology (UIT)",
+      "master_thesis": "Thesis: SoIEA Social Implicit Emotion Analysis",
+      "gpa": "GPA: 2.85/4"
+    }
+  },
+  "present":"Present"
+}

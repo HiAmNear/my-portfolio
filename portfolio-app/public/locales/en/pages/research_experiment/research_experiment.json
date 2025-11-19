@@ -1,0 +1,30 @@
+{
+  "research": {
+    "title_page": "Research Experience",
+    "technologies-used": "Technologies Used",
+    "groups": {
+      "pipeline": "Data Pipeline & Tools",
+      "model_deploy": "Model & Deployment (Planned)",
+      "llm_validation": "LLM APIs & Validation",
+      "benchmark": "Model Benchmarks"
+    },
+    "soiea": {
+      "title": "SoIEA: Social Implicit Emotion Analysis (Ongoing)",
+      "desc_1": "Developing an advanced version of the ViISA project to analyze implicit emotions in dynamic social media contexts, specifically YouTube.",
+      "desc_2": "Engineering a new data pipeline to crawl and process comments from a curated dataset of over 500 Vietnamese YouTube channels.",
+      "desc_3": "The current focus is training and benchmarking models on this new, large-scale YouTube comment dataset.",
+      "desc_4": "The ultimate goal is to expand the system for real-time implicit emotion prediction during YouTube livestreams."
+    },
+    "viisa": {
+      "title": "ViISA: A Novel Benchmark for Implicit Sentiment Analysis in Vietnamese",
+      "date": "12/2024 - 7/2025",
+      "desc_1": "Principal creator of the ViISA dataset (<a href='https://huggingface.co/HiAmNear/ViISA' target='_blank' class='url-text hover'>Hugging Face: HiAmNear/ViISA</a>), a novel resource for Vietnamese implicit emotion analysis.",
+      "desc_2": "Engineered a data pipeline to crawl news articles (tuoitre.com), perform semantic chunking (using underthesea), and filter candidates.",
+      "desc_3": "Developed a multi-stage, AI-assisted labeling workflow utilizing LLMs (e.g., GPT-4, Gemini-Flash) to annotate 9,000+ data samples.",
+      "desc_4": "Validated annotation quality and inter-annotator agreement using the Cohen's Kappa statistic before large-scale labeling.",
+      "desc_5": "Benchmarked a suite of models (from BiLSTM to PhoBERT) on the dataset, evaluating performance using key metrics like Macro F1 (MF1), Weighted F1 (WF1), and Accuracy.",
+      "desc_6": "This research was formalized as a manuscript and underwent the initial review process at the <strong>AAAI 2025 Conference</strong>."
+    }
+  },
+  "present":"Present"
+}

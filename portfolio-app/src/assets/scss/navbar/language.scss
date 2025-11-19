@@ -1,0 +1,79 @@
+.language-wrapper {
+  position: relative; // để dropdown căn theo thẻ này
+  display: inline-block; // hoặc flex nếu bạn muốn
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%; // nằm ngay dưới CartIcon
+  right: 0;
+  width: 20vw;
+  background-color: $sub-background-color;
+  border: $border-line;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 999;
+  padding: 16px;
+  display: none;
+}
+
+.header-language{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.language-items{
+    padding: 1rem;
+    display: flex;
+    border-top: $border-line;
+    align-items: center;
+    gap: 1rem;
+}
+
+.language-dropdown.show {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .icon-languge{
+    position: relative;
+    // right: -40px; 
+  }
+}
+
+@media (max-width: 1023px) {
+  .language-dropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: calc(100% - 32px);
+    background-color: $sub-background-color;
+    z-index: 9999;
+    overflow-y: auto;
+    display: none;
+    max-height: none;
+    &.show {
+      display: block;
+    }
+  }
+
+  .header-language{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .close-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+}

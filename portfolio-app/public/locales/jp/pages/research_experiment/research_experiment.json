@@ -1,0 +1,30 @@
+{
+  "research": {
+    "title_page": "研究実績",
+    "technologies-used": "使用技術",
+    "groups": {
+      "pipeline": "データパイプライン・ツール",
+      "model_deploy": "モデル・デプロイ（計画中）",
+      "llm_validation": "LLM API・検証",
+      "benchmark": "モデルベンチマーク"
+    },
+    "soiea": {
+      "title": "SoIEA: Social Implicit Emotion Analysis (社会的潜在感情分析) - 進行中",
+      "desc_1": "YouTubeなどの動的ソーシャルメディアにおける潜在的な感情を分析する、ViISAプロジェクトの発展版を開発中。",
+      "desc_2": "500以上のベトナムのYouTubeチャンネルからコメントを収集・処理する新しいデータパイプラインを構築。",
+      "desc_3": "現在は、この大規模なYouTubeコメントデータセットを用いたモデルのトレーニングとベンチマークに注力している。",
+      "desc_4": "最終目標は、YouTubeライブ配信中のリアルタイム潜在感情予測システムへの拡張である。"
+    },
+    "viisa": {
+      "title": "ViISA: A Novel Benchmark for Implicit Sentiment Analysis in Vietnamese",
+      "date": "2024年12月 - 2025年7月",
+      "desc_1": "ベトナム語の潜在感情分析のための新しいリソースであるViISAデータセット(<a href='https://huggingface.co/HiAmNear/ViISA' target='_blank' class='url-text hover'>Hugging Face: HiAmNear/ViISA</a>)の主要作成者。",
+      "desc_2": "ニュース記事(tuoitre.com)のクローリング、意味的チャンキング(underthesea使用)、および候補フィルタリングを行うデータパイプラインを構築。",
+      "desc_3": "LLM(GPT-4, Gemini-Flashなど)を活用した多段階のAI支援ラベリングワークフローを開発し、9,000以上のデータサンプルにアノテーションを実施。",
+      "desc_4": "大規模なラベリングの前に、Cohenのカッパ係数を使用してアノテーションの品質と作業者間の一致率を検証。",
+      "desc_5": "データセット上で一連のモデル(BiLSTMからPhoBERTまで)のベンチマークを行い、Macro F1(MF1)、Weighted F1(WF1)、Accuracyなどの主要指標を用いて性能を評価。",
+      "desc_6": "本研究は論文としてまとめられ、<strong>AAAI 2025 Conference</strong>にて初期査読を受けた。"
+    }
+  },
+  "present":"現在"
+}

@@ -1,0 +1,31 @@
+{
+  "overview": {
+    "basicInfo": {
+      "title": "基本情報",
+      "name" : "名前",
+      "private-name" : "マ・ハイ・ニャット",
+      "location-title" : "住所",
+      "location": "ホーチミン市"
+    },
+    "skills": {
+      "title": "スキル",
+      "core": "コアテクノロジー",
+      "ai": "AI・NLP",
+      "data-engineering": "データエンジニアリング・ビッグデータ",
+      "web": "Webフレームワーク・ツール"
+    },
+    "edu": {
+      "title": "学歴",
+      "nature_language": "言語",
+      "jp_n3": "日本語 (JLPT N3)",
+      "english": "英語",
+      "vietnamese": "ベトナム語",
+      "master_level": "修士課程",
+      "bachelor_level": "学士課程",
+      "school_uit": "情報工学大学 (UIT)",
+      "master_thesis": "修士論文：SoIEA Social Implicit Emotion Analysis(社会的潜在感情分析)",
+      "gpa": "GPA：2.85/4"
+    }
+  },
+  "present":"現在"
+}

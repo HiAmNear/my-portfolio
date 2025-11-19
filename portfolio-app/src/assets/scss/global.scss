@@ -1,0 +1,139 @@
+// import service
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+// color
+
+$main-background-color : #FAF5EF;
+$header-background-color : #E3B7A0;
+$sub-background-color : #FBEDE2;
+$header-text-color : #6B4C3B;
+$general-text-color : #8C6E5B;
+$shadow-color : #D8C1B0;
+$hover-color : #C97B5C;
+$input-background-color: #FEF6F1;
+// font
+$font-family : 'Libre Baskerville', serif;
+
+$border-color : #D8C1B0;
+$border-line : 1px solid $border-color;
+$border-line-heavy : 5px solid $border-color;
+html, body, main , #root {
+  height: 100%; // đảm bảo body, root full height
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // Đảm bảo #root luôn cao ít nhất 100% màn hình
+}
+
+main {
+  flex-grow: 1; // ⬅️ ĐÂY LÀ "MA THUẬT"
+                  // Nó bảo <main> lấp đầy MỌI khoảng trống
+                  // còn lại, tự động đẩy <Footer> xuống đáy.
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh; // toàn màn hình
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+body {
+  font-family: $font-family, serif;
+  background-color: $main-background-color;
+  color : $general-text-color;
+  // min-height: 100vh;
+  font-size: clamp(0.8125rem, 0.607rem + 1.027vw, 2.25rem);
+}
+
+button{
+    display: flex;
+    background-color: $header-background-color;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    border-radius: 0.5rem;
+    border: $border-line;
+    margin: 2rem 0;
+    cursor: pointer;
+    font-family: $font-family, serif;
+    color : $header-text-color;
+    font-size: clamp(1.5rem, 1.286rem + 1.071vw, 3rem);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.header-text{
+    text-decoration: none;
+    color: $header-text-color;
+    font-size: clamp(1.5rem, 1.286rem + 1.071vw, 3rem);
+}
+
+.padding-header-text{
+  padding: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.url-text{
+    text-decoration: none;
+    color: $general-text-color;
+}
+
+.hover {
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.information-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem auto; 
+    background-color: $sub-background-color;
+    border: $border-line;
+}
+
+.border-top{
+  border-top: $border-line-heavy;
+}
+.margin-top{
+  margin-top: 1rem;
+}
+.job-detail{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
+}
+
+.job-title-date{
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+}
+
+.page-container{
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}

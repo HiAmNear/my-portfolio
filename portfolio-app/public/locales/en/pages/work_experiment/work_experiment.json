@@ -1,0 +1,49 @@
+{
+  "work": {
+    "title_page": "Work Experience",
+    "technologies-used": "Technologies Used",
+    "nia": {
+      "company": "Startup: NiaColor - E-commerce Platform",
+      "date": "07/2025 - {{now}}",
+      "role": "Founder & Lead Developer",
+      "roles": {
+        "lead_p1": "Leading the end-to-end development of a full-stack e-commerce platform (currently in development) for a plaster figure painting business.",
+        "lead_p2": "<strong>Completed (Phase 1):</strong> Built the entire client-facing frontend (FE) using ReactJS and SCSS, focusing on a responsive user experience.",
+        "lead_p3": "<strong>Completed (Phase 1):</strong> Implemented multi-language support using `react-i18next`.",
+        "lead_p4": "<strong>Completed (Phase 1):</strong> Designed the complete backend system architecture, including API specifications and the PostgreSQL database schema.",
+        "lead_p5": "<strong>In Progress (Phase 2):</strong> Backend implementation (using Go) and admin dashboard development (CRM, analytics) are the next major milestones."
+      },
+      "groups": {
+        "fe": "Frontend (Completed)",
+        "be": "Backend (Architecture & Planned)"
+      }
+    },
+    "mec": {
+      "date": "5/2023 - 7/2025",
+      "role": "Software Engineer",
+      "roles": {
+        "dev_title": "Web Application Development",
+        "dev_p1": "Responsible for developing and maintaining web applications for both backend and frontend.",
+        "dev_p2": "Ensured performance and scalability.",
+        "dev_p3": "Refined and optimized code to enhance application performance.",
+        "dev_p4": "Coordinated with cross-functional teams (design, UX, and QA) to meet project deadlines, ensuring product delivery on schedule within the Waterfall process.",
+        
+        "test_title": "Web Application Testing",
+        "test_p1": "Created detailed test checklists and test cases to ensure comprehensive functional coverage.",
+        "test_p2": "Documented program behavior step-by-step to track and validate expected outcomes.",
+        "test_p3": "Developed and maintained automated test scripts using Robot Framework.",
+        "test_p4": "Collaborated with the development team to identify, report, and verify software defects.",
+
+        "vba_title": "VBA System Maintenance Support",
+        "vba_p1": "Collaborated on optimizing VBA code and rebuilt Access-style UI in VBA.",
+        "vba_p2": "Adapted VBA functions for Visual Basic compatibility.",
+        "vba_p3": "Maintained Visual Basic code to support the migration from Internet Explorer to Microsoft Edge.",
+        "vba_p4": "Utilized a specific HOS.net proprietary tool (for .NET) to support system maintenance.",
+
+        "ai_title": "AI Project: License Plate Recognition (Japanese Vehicles)",
+        "ai_p1": "Developed a license plate recognition system using a combination of OpenCV and CNN."
+      }
+    }
+  },
+  "present":"Present"
+}

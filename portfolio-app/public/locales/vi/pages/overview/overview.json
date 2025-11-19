@@ -1,0 +1,31 @@
+{
+  "overview": {
+    "basicInfo": {
+      "title" : "Thông Tin Cơ Bản",
+      "name" : "Họ Tên",
+      "private-name" : "Mã Hải Nhật",
+      "location-title" : "Vị Trí",
+      "location": "Thành Phố Hồ Chí Minh"
+    },
+    "skills": {
+      "title" : "Kỹ Năng",
+      "core": "Công Nghệ Lõi",
+      "ai": "AI & NLP",
+      "data-engineering": "Kỹ Sư Dữ Liệu Và Dữ Liệu Lớn",
+      "web": "Web Frameworks & Công Cụ Liên Quan"
+    },
+    "edu": {
+      "title" : "Giáo Dục",
+      "nature_language": "Ngôn Ngữ",
+      "jp_n3": "Tiếng Nhật JLPT N3",
+      "english": "Tiếng Anh",
+      "vietnamese": "Tiếng Việt",
+      "master_level": "Cao Học",
+      "bachelor_level": "Đại Học",
+      "school_uit": "Đại Học Công Nghệ Thông Tin UIT",
+      "master_thesis": "Khóa Luận : SoIEA Social Implicit Emotion Analysis",
+      "gpa": "GPA : 2.85/4"
+    }
+  },
+  "present":"Hiện Tại"
+}
