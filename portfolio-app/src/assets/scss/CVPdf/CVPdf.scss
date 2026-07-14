@@ -1,0 +1,24 @@
+/* CV PDF Stylesheet */
+
+@media print {
+  /* Ép toàn bộ body về size chuẩn A4 */
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact; /* Giữ nguyên màu nền, border khi in */
+    print-color-adjust: exact;
+  }
+  
+  .page-container {
+    padding: 20mm; /* Khoảng cách an toàn chống lẹm lề máy in */
+    box-shadow: none;
+    background: #fff;
+  }
+
+  /* Ẩn hoàn toàn Footer bar của web khi xuất file PDF */
+  footer, .footer-bar, .navbar-container {
+    display: none !important;
+  }
+}

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import OverView from "@Template/pages/overview/overview";
 import WorkExperiment from "@Template/pages/work_experiment/work_experiment";
 import ResearchExperiment from "@Template/pages/research_experiment/research_experiment";
+import CVPdfDocument from "@Template/pages/CVPdf/CVPdf";
 export default function App() {
   return (
     <div className="app-container">
@@ -12,6 +13,7 @@ export default function App() {
             <Route path="/overview" element={<OverView />} />
             <Route path="/work-experiment" element={<WorkExperiment />} />
             <Route path="/research-experiment" element={<ResearchExperiment />} />
+            <Route path="/cv-pdf" element={<CVPdfDocument />} />
           </>
         </Routes>
       </main>

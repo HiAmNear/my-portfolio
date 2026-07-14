@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { DownloadIcon, MenuIcon, HomeIcon, WorkIcon, ReasearchIcon } from '@Icon';
 import useWindowWidth from "@WindowWidth";
 import Language from './language';
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslation as useTranslationLocal } from "@Translation";
 
 // // 1. Import hook chuẩn
@@ -18,7 +18,7 @@ import { useTranslation as useTranslationLocal } from "@Translation";
 // import { workData } from "@Data/work-data.js";
 // import { researchData } from '@Data/research-data.js';
 
-// // ✨ COMPONENT RIÊNG: Giúp nút Download ổn định, hiện Icon đúng lúc
+// ✨ COMPONENT RIÊNG: Giúp nút Download ổn định, hiện Icon đúng lúc
 // const CVDownloadButton = ({ ready, t_data, translateLocal }) => {
 //     // Chỉ hiện loading nếu chưa tải xong ngôn ngữ
 //     if (!ready) {
@@ -33,9 +33,9 @@ import { useTranslation as useTranslationLocal } from "@Translation";
 //         <PDFDownloadLink
 //             document={
 //                 <CVPdfDocument 
-//                     overview={overviewData} 
-//                     work={workData} 
-//                     research={researchData} 
+//                     overview={overviewData}
+//                     work={workData}
+//                     research={researchData}
 //                     t={t_data} 
 //                 />
 //             }
@@ -59,13 +59,33 @@ import { useTranslation as useTranslationLocal } from "@Translation";
 export default function NavBar() {
     const { t: translate } = useTranslationLocal("@Template/navbar/navbar");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    // Lấy ngôn ngữ và trạng thái ready
-    // const { t: t_data, ready, i18n } = useTranslation(["work", "overview", "research", "common"]); 
     
     const windowWidth = useWindowWidth();
     const isSmall = typeof windowWidth === "number" ? windowWidth <= 1023 : false;
 
+
+    const iframeRef = useRef(null);
+
+    const handlePrintCV = () => {
+        const iframe = iframeRef.current;
+        if (!iframe) return;
+
+        // Thiết lập nguồn cho iframe là trang CV của bạn
+        iframe.src = "/cv-pdf";
+
+        // Đợi iframe tải xong nội dung thì kích hoạt lệnh in
+        iframe.onload = () => {
+        // 3. Chờ thêm 800ms để React inside iframe kịp render giao diện
+        setTimeout(() => {
+            try {
+                iframe.contentWindow.focus();
+                iframe.contentWindow.print();
+            } catch (error) {
+                console.error("Lỗi khi in dữ liệu từ iframe:", error);
+            }
+        }, 800); // 800ms là khoảng thời gian vừa đẹp cho React render
+    };
+    };
     return ( 
         <>
             <div className="navbar-container">
@@ -88,15 +108,19 @@ export default function NavBar() {
                                     </div>
                                     
                                     {/* Mobile */}
-                                    {/* <div className="title-text header-text hover cursor flex-row">
-                                        <CVDownloadButton 
+                                    <Link className="title-text header-text hover" to="/cv-pdf"
+                                    onClick={() => window.print()}>
+                                            <DownloadIcon />
+                                    </Link>
+                                    <div className="title-text header-text hover cursor flex-row">
+                                        {/* <CVDownloadButton 
                                             ready={ready} 
                                             t_data={t_data} 
                                             translateLocal={translate}
                                             // ✨ KEY QUAN TRỌNG: Buộc nút render lại khi đổi ngôn ngữ
                                             key={i18n.language} 
-                                        />
-                                    </div> */}
+                                        /> */}
+                                    </div>
                                 </>
                             ) : (
                                 <>
@@ -112,15 +136,22 @@ export default function NavBar() {
 
                                     <div className="icon-gap">
                                         {/* Desktop */}
-                                        {/* <div className="title-text header-text hover cursor">
-                                            <CVDownloadButton 
+                                        <Link 
+                                            className="title-text header-text hover" 
+                                            to="/cv-pdf" 
+                                            state={{ triggerPrint: true }} // ✨ Đính kèm trạng thái yêu cầu in ở đây
+                                        >
+                                            <DownloadIcon />
+                                        </Link>
+                                        {/* <div className="title-text header-text hover cursor"> */}
+                                            {/* <CVDownloadButton 
                                                 ready={ready} 
                                                 t_data={t_data} 
                                                 translateLocal={translate}
                                                 // ✨ KEY QUAN TRỌNG
                                                 key={i18n.language}
-                                            />
-                                        </div> */}
+                                            /> */}
+                                        {/* </div> */}
 
                                         <div className="title-text header-text cursor">
                                             <Language />
@@ -136,6 +167,12 @@ export default function NavBar() {
                     onClick={() => setIsMenuOpen(isOpen => !isOpen)}
                 />
             </div>
+            {/* Thẻ iframe ẩn, không hiển thị trên giao diện */}
+            <iframe 
+                ref={iframeRef} 
+                style={{ display: 'none' }} 
+                title="CV Print Link"
+            />
         </>
     );  
 }
