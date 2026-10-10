@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation as useTranslationLocal } from "@Translation";
 // Nhận 1 'job' làm prop
-export default function JobDetail({ job }) {
+export default function JobDetail({ job , showTechnologies = true}) {
   const { t: translate } = useTranslationLocal("@Template/work_experiment/work_experiment");
 
   return (
@@ -34,30 +34,30 @@ export default function JobDetail({ job }) {
         </ul>
 
         {/* Logic để render Technologies */}
-        <div className="job-technologies">
-          <strong>{translate("work.technologies-used")}:</strong>
-          
-          {/* Nếu có 'techGroups' (như startup) */}
-          {job.techGroups && job.techGroups.map(group => (
-            <div key={group.id}>
-              <h4 className="technology-group-header">{translate(group.title)}</h4>
+        {showTechnologies && (
+          <div className="job-technologies">
+            <strong>{translate("work.technologies-used")}:</strong>
+            
+            {job.techGroups && job.techGroups.map(group => (
+              <div key={group.id}>
+                <h4 className="technology-group-header">{translate(group.title)}</h4>
+                <div className="skill-detail">
+                  {group.skills.map((skill, index) => (
+                    <span key={index}>{translate(skill)}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            {job.technologies && (
               <div className="skill-detail">
-                {group.skills.map((skill, index) => (
-                  <span key={index}>{translate(skill)}</span>
+                {job.technologies.map((tech, index) => (
+                  <span key={index}>{translate(tech)}</span>
                 ))}
               </div>
-            </div>
-          ))}
-
-          {/* Nếu có 'technologies' (như MEC) */}
-          {job.technologies && (
-            <div className="skill-detail">
-              {job.technologies.map((tech, index) => (
-                <span key={index}>{translate(tech)}</span>
-              ))}
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        )}
 
       </div>
     </div>

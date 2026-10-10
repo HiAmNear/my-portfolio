@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation as useTranslationLocal } from "@Translation";
-export default function ResearchDetail({ research }) {
+export default function ResearchDetail({ research , showTechnologies = true }) {
   const { t: translate } = useTranslationLocal("@Template/research_experiment/research_experiment");
   
   return (
@@ -34,19 +34,21 @@ export default function ResearchDetail({ research }) {
         </ul>
 
         {/* 4. Technologies */}
-        <div className="job-technologies">
-          <strong>{translate('research.technologies-used')} : </strong>
-          {research.techGroups.map((group, idx) => (
-            <div key={idx}>
-              <h4 className="technology-group-header">{translate(group.title)}</h4>
-              <div className="skill-detail">
-                {group.skills.map((skill, sIdx) => (
-                  <span key={sIdx}>{translate(skill)}</span>
-                ))}
+        {showTechnologies && (
+          <div className="job-technologies">
+            <strong>{translate('research.technologies-used')} : </strong>
+            {research.techGroups.map((group, idx) => (
+              <div key={idx}>
+                <h4 className="technology-group-header">{translate(group.title)}</h4>
+                <div className="skill-detail">
+                  {group.skills.map((skill, sIdx) => (
+                    <span key={sIdx}>{translate(skill)}</span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
       </div>
     </div>

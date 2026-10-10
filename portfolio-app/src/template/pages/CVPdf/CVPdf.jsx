@@ -25,27 +25,52 @@ export default function CVPdfDocument() {
     const navigate = useNavigate();
     const location = useLocation(); // 2. Lấy trạng thái được truyền từ NavBar
 
-    useEffect(() => {
-        // Kiểm tra xem có đúng là chuyển sang từ nút Download hay không
-        if (location.state?.triggerPrint) {
+    // useEffect(() => {
+    //     // Kiểm tra xem có đúng là chuyển sang từ nút Download hay không
+    //     if (location.state?.triggerPrint) {
             
-            // Chờ 400ms để React vẽ xong chữ nghĩa, hình ảnh (tránh trang trắng)
-            const timer = setTimeout(() => {
-                window.focus();
-                window.print(); // 🖨️ Mở hộp thoại in PDF (Hàm này sẽ CHẶN code chạy tiếp)
+    //         // Chờ 400ms để React vẽ xong chữ nghĩa, hình ảnh (tránh trang trắng)
+    //         const timer = setTimeout(() => {
+    //             window.focus();
+    //             window.print(); // 🖨️ Mở hộp thoại in PDF (Hàm này sẽ CHẶN code chạy tiếp)
                 
-                // ⏬ Đoạn code dưới này CHỈ chạy sau khi người dùng bấm Lưu hoặc Hủy trên hộp thoại PDF
-                navigate(-1); // Quay về màn hình hiện tại ngay lập tức
-            }, 400);
+    //             // ⏬ Đoạn code dưới này CHỈ chạy sau khi người dùng bấm Lưu hoặc Hủy trên hộp thoại PDF
+    //             navigate(-1); // Quay về màn hình hiện tại ngay lập tức
+    //         }, 400);
 
-            return () => clearTimeout(timer);
-        }
+    //         return () => clearTimeout(timer);
+    //     }
+    // }, [location.state, navigate]);
+
+    useEffect(() => {
+    if (location.state?.triggerPrint) {
+        // 1. Lưu lại title gốc của website
+        const originalTitle = document.title;
+
+        // 2. Set tên file bạn muốn trình duyệt tự động điền sẵn
+        // Trình duyệt sẽ gợi ý file: "CV_Ma_Hai_Nhat_Software_Engineer.pdf"
+        document.title = "CV_MaHaiNhat_SoftwareEngineer.pdf";
+
+        const timer = setTimeout(() => {
+        window.focus();
+        window.print(); // Trình duyệt sẽ lấy document.title làm tên file lưu mặc định
+
+        // 3. Khôi phục lại title gốc của web
+        document.title = originalTitle;
+
+        navigate(-1);
+        }, 400);
+
+        return () => {
+        clearTimeout(timer);
+        document.title = originalTitle;
+        };
+    }
     }, [location.state, navigate]);
-
     
   return (
     <>
-        <div className="page-container"> {/* Giữ layout shell */}
+        <div className="cv-pdf-page-container"> {/* Giữ layout shell */}
         
             {/* --- AVATAR --- */}
             {/* <div className="avatar-container">
@@ -71,27 +96,6 @@ export default function CVPdfDocument() {
                 </div>
             </div>
 
-            <div className="information-container">
-                <h1 className="header-text padding-header-text">
-                    {translate_work_experiment("work.title_page")}
-                </h1>
-        
-                {/* 3. Dùng vòng lặp .map() */}
-                {workData.map(job => (
-                    <JobDetail key={job.id} job={job} />
-                ))}
-            </div>
-
-            <div className="information-container">
-                <h1 className="header-text padding-header-text">
-                    {translate_research_experiment("research.title_page")}
-                </h1>
-
-                {/* Vòng lặp render */}
-                {researchData.map(item => (
-                    <ResearchDetail key={item.id} research={item} />
-                ))}
-            </div>
             {/* --- 2. KỸ NĂNG --- */}
             <div className="information-container">
                 <h1 className="header-text">{translate_overview("overview.skills.title")}</h1>
@@ -117,6 +121,28 @@ export default function CVPdfDocument() {
                     </div>
                 ))}
                 </div>
+            </div>
+
+            <div className="information-container">
+                <h1 className="header-text padding-header-text">
+                    {translate_work_experiment("work.title_page")}
+                </h1>
+        
+                {/* 3. Dùng vòng lặp .map() */}
+                {workData.map(job => (
+                    <JobDetail key={job.id} job={job} showTechnologies={false} />
+                ))}
+            </div>
+
+            <div className="information-container">
+                <h1 className="header-text padding-header-text">
+                    {translate_research_experiment("research.title_page")}
+                </h1>
+
+                {/* Vòng lặp render */}
+                {researchData.map(item => (
+                <ResearchDetail key={item.id} research={item} showTechnologies={false} />
+                ))}
             </div>
 
             {/* --- 3. GIÁO DỤC --- */}

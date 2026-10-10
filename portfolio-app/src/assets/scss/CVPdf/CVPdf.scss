@@ -1,24 +1,124 @@
-/* CV PDF Stylesheet */
+/* ========================================================
+   CVPdf.scss - DÀNH RIÊNG CHO TRANG XUẤT CV PDF
+   ======================================================== */
 
-@media print {
-  /* Ép toàn bộ body về size chuẩn A4 */
-  body {
-    width: 210mm;
-    height: 297mm;
-    margin: 0;
+/* 1. Thiết lập trang in trình duyệt */
+@page {
+  size: A4 portrait;
+  margin: 0; /* Xóa lề mặc định của Chrome để dùng padding của container */
+}
+
+/* 2. Giao diện xem trên màn hình Web (Hiển thị như một trang A4 xem trước) */
+.cv-pdf-page-container {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 24px auto;
+  padding: 10mm 15mm;
+  box-sizing: border-box;
+  background-color: #FAF5EF;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font-size: 13px;
+  line-height: 1.4;
+
+  .information-container {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+
+  .header-text {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .padding-header-text {
     padding: 0;
-    -webkit-print-color-adjust: exact; /* Giữ nguyên màu nền, border khi in */
-    print-color-adjust: exact;
+    margin-left: 0;
   }
-  
-  .page-container {
-    padding: 20mm; /* Khoảng cách an toàn chống lẹm lề máy in */
-    box-shadow: none;
-    background: #fff;
+}
+
+/* 3. Toàn bộ cấu hình xuất PDF khi bấm Ctrl + P / In */
+@media print {
+  /* Triệt tiêu height: 100% và display: flex của global gây lỗi nhảy trang */
+  html, body, #root, main, .app {
+    height: auto !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    overflow: visible !important;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
-  /* Ẩn hoàn toàn Footer bar của web khi xuất file PDF */
-  footer, .footer-bar, .navbar-container {
+  /* Đưa container sát mép giấy A4, siết lề và cỡ chữ để gom về 2 trang */
+  .cv-pdf-page-container {
+    width: 210mm !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    padding: 8mm 12mm !important;
+    font-size: 11.5px !important;     /* Cỡ chữ tài liệu chuẩn */
+    line-height: 1.35 !important;
+    background-color: #FAF5EF !important;
+  }
+
+  /* Cho phép các khối lớn chảy tự nhiên nối tiếp nhau, không bị ép nhảy trang */
+  .information-container {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+    break-after: auto !important;
+    page-break-after: auto !important;
+    padding: 8px 12px !important;     /* Thu hẹp padding của khối */
+    margin: 6px 0 !important;          /* Thu hẹp margin giữa các khối */
+  }
+
+  /* Giảm cỡ chữ tiêu đề trong bản in */
+  .header-text {
+    font-size: 14px !important;
+    margin-bottom: 4px !important;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  .padding-header-text {
+    padding: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* CHỈ chống xé ngang dòng chữ ở từng mục nhỏ con */
+  .job-detail,
+  .skill-detail,
+  .education-information-layout > div {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Gom danh sách kỹ năng / công nghệ thành hàng ngang để không tốn chiều dọc */
+  .skill-detail,
+  .language-detail {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 3px 8px !important;
+  }
+
+  /* Thu gọn khoảng cách các gạch đầu dòng */
+  ul, ol {
+    margin: 4px 0 !important;
+    padding-left: 16px !important;
+  }
+
+  li {
+    margin-bottom: 2px !important;
+  }
+
+  .margin-top {
+    margin-top: 4px !important;
+  }
+
+  /* Giấu thanh điều hướng, nút bấm & footer khi in */
+  nav, footer, .footer-bar, .navbar-container, button {
     display: none !important;
   }
 }
