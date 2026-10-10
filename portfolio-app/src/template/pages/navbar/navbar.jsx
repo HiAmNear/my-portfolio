@@ -110,7 +110,7 @@ export default function NavBar() {
                                     {/* Mobile */}
                                     <Link className="title-text header-text hover" to="/cv-pdf"
                                     onClick={() => window.print()}>
-                                            <DownloadIcon />
+                                        {translate("download")} <DownloadIcon />
                                     </Link>
                                     <div className="title-text header-text hover cursor flex-row">
                                         {/* <CVDownloadButton 
