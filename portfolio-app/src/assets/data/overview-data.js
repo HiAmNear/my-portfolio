@@ -16,14 +16,19 @@ export const overviewData = {
         title: "overview.skills.core",
         items: [
             "Python",       // Ngôn ngữ chính
-            "Golang",  // Backend startup
+            // "Golang",  // Backend startup (NiaColor)
             "JavaScript",   // Frontend
             "SQL",          // Data
             "C# / .NET",    // Kinh nghiệm cũ
-            "HTML / CSS / SCSS",
+            "C++",          // DXC - backend server
+            "Java",         // DXC - web
+            "Visual Basic / VBA",
+            // "HTML / CSS / SCSS", // SCSS dùng cho NiaColor
+            "HTML / CSS",
             "PostgreSQL",
             "Git / GitHub",
             "Docker",
+            "Makefile",
         ]
         },
         
@@ -35,8 +40,12 @@ export const overviewData = {
             "Transformers (HuggingFace)",
             "OpenCV",
             "Scikit-learn",
-            "LLM APIs (GPT-4, Gemini)",
-            "UnderTheSea"
+            // "LLM APIs (GPT-4, Gemini)",
+            "Together AI APIs",
+            "UnderTheSea",
+            "Devin AI (AI-assisted development)",
+            "GitHub Copilot / Copilot Chat",
+            "Claude",
         ]
         },
 
@@ -47,7 +56,7 @@ export const overviewData = {
             "Selenium (Crawling)",
             "Apache Kafka",
             "PySpark",
-            "Airflow",
+            // "Airflow", // chưa có dự án minh chứng
         ]
         },
 
@@ -55,13 +64,15 @@ export const overviewData = {
         {
         title: "overview.skills.web",
         items: [
-            "ReactJS + Vite", 
-            "react-i18next",
+            // "ReactJS + Vite", // NiaColor
+            // "react-i18next", // NiaColor
             "Django",
-            "Unit Testing",
+            // "Unit Testing", // là quy trình (process), không phải công cụ
             "Robot Framework (Testing)",
             "Pylint / JSLint",
-            "ESLint",
+            // "ESLint", // chưa có dự án minh chứng
+            "WebSocket",
+            "GrapeCity Spread / InputMan",
         ]
         }
     ],

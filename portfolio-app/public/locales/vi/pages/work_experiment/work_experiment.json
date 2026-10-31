@@ -2,6 +2,26 @@
   "work": {
     "title_page": "Kinh Nghiệm Làm Việc",
     "technologies-used": "Công Nghệ Áp Dụng",
+    "dxc": {
+      "company": "DXC TECHNOLOGY SERVICES VIỆT NAM",
+      "date": "12/2025 - {{now}}",
+      "role": "Kỹ sư phần mềm / Associate Leader",
+      "roles": {
+        "dev_title": "Dự án 1: Phát triển hệ thống cho khách hàng Nhật Bản trong lĩnh vực hàng không",
+        "dev_p1": "Làm việc trong team 6 người, được khách hàng giao phát triển end-to-end theo mô hình Waterfall (Basic Design → Detail Design → PG → UT → FT → ST → UAT); phụ trách Detail Design, PG, UT và FT.",
+        "dev_p2": "Phát triển backend server (C++, Makefile, PostgreSQL), giao diện client (Visual Basic, GrapeCity Spread / InputMan) và giao diện web (Java, HTML/CSS), giao tiếp qua WebSocket.",
+        "dev_p3": "Hỗ trợ báo cáo tiến độ task cho khách hàng Nhật Bản bằng tiếng Nhật trong buổi họp định kỳ hằng tuần.",
+        "ai_title": "Dự án 2 (song song, theo yêu cầu khách hàng): Ứng dụng AI tự động hóa phát triển",
+        "ai_p1": "Nghiên cứu và triển khai Devin AI cho team; xây dựng framework tự động sinh tài liệu Detail Design và source code cho backend server, giao diện web và client Visual Basic.",
+        "ai_p2": "Thiết kế framework giúp hạn chế hallucination của AI, đảm bảo output tuân thủ chuẩn của dự án.",
+        "ai_p3": "Rút ngắn thời gian Detail Design + PG cho task phức tạp từ ~10 ngày xuống ~4 ngày (bao gồm review), giảm ~60% effort.",
+        "lead_title": "Associate Leader",
+        "lead_p1": "Hỗ trợ xây dựng quy trình cho team mới thành lập; xây dựng checklist Detail Design, PG, UT, FT giúp loại bỏ các lỗi lặp lại như sai format tài liệu hay bỏ sót kiểm tra điều kiện tiền đề trước khi test.",
+        "lead_p2": "Soạn draft estimation và WBS cho các task; nhận diện và đưa các effort ẩn (thời gian họp, nhiều vòng sửa theo review, nhân sự chỉ phân bổ 0.8 thay vì 1.0) vào estimation.",
+        "lead_p3": "Phát hiện nguyên nhân thành viên phải OT ngầm là do estimation chưa tính effort cho 2 vòng review; kiểm tra thấy vấn đề tương tự ở các nhóm khác và đề xuất điều chỉnh quy trình estimation cho toàn team, giúp giảm rõ tình trạng OT ngầm ở các task sau.",
+        "lead_p4": "Quản lý tiến độ 1–2 thành viên, đảm bảo không trễ deadline; hỗ trợ PM báo cáo tiến độ tổng thể của team cho khách hàng."
+      }
+    },
     "nia": {
       "company": "Startup: NiaColor - Nền tảng Thương mại điện tử",
       "date": "07/2025 - {{now}}",
@@ -22,7 +42,7 @@
       "date": "5/2023 - 7/2025",
       "role": "Kỹ sư Phần mềm",
       "roles": {
-        "dev_title": "Phát triển Ứng dụng Web",
+        "dev_title": "Phát triển Ứng dụng Web (lĩnh vực Bảo hiểm)",
         "dev_p1": "Chịu trách nhiệm phát triển và bảo trì các ứng dụng web cho cả backend và frontend.",
         "dev_p2": "Đảm bảo hiệu năng và khả năng mở rộng.",
         "dev_p3": "Tinh chỉnh và tối ưu hóa mã nguồn để nâng cao hiệu suất ứng dụng.",
@@ -34,7 +54,7 @@
         "test_p3": "Phát triển và duy trì các kịch bản kiểm thử tự động sử dụng Robot Framework.",
         "test_p4": "Hợp tác với đội ngũ phát triển để xác định, báo cáo và xác minh lỗi phần mềm.",
 
-        "vba_title": "Hỗ trợ Bảo trì Hệ thống VBA",
+        "vba_title": "Hỗ trợ Bảo trì Hệ thống VBA (tính phí nước & thuế địa phương Nhật Bản)",
         "vba_p1": "Hợp tác tối ưu hóa mã nguồn VBA và xây dựng lại giao diện người dùng kiểu Access trong VBA.",
         "vba_p2": "Điều chỉnh các hàm VBA để tương thích với Visual Basic.",
         "vba_p3": "Bảo trì mã nguồn Visual Basic để hỗ trợ quá trình chuyển đổi từ Internet Explorer sang Microsoft Edge.",

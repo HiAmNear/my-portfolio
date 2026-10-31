@@ -16,7 +16,7 @@
     },
     "edu": {
       "title": "Education",
-      "nature_language": "Nature Language",
+      "nature_language": "Languages",
       "jp_n3": "Japanese (JLPT N3)",
       "english": "English",
       "vietnamese": "Vietnamese",
@@ -27,5 +27,5 @@
       "gpa": "GPA: 2.85/4"
     }
   },
-  "present":"Hiện Tại"
+  "present":"Present"
 }

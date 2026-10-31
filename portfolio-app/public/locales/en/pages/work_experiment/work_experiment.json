@@ -2,6 +2,26 @@
   "work": {
     "title_page": "Work Experience",
     "technologies-used": "Technologies Used",
+    "dxc": {
+      "company": "DXC TECHNOLOGY SERVICES VIETNAM",
+      "date": "12/2025 - {{now}}",
+      "role": "Software Engineer / Associate Leader",
+      "roles": {
+        "dev_title": "Project 1: System Development for a Japanese Client in the Aviation Industry",
+        "dev_p1": "Worked in a 6-member team entrusted by the client with end-to-end Waterfall development (Basic Design → Detail Design → PG → UT → FT → ST → UAT); responsible for Detail Design, PG, UT and FT.",
+        "dev_p2": "Developed the backend server (C++, Makefile, PostgreSQL), desktop client UI (Visual Basic, GrapeCity Spread / InputMan) and web UI (Java, HTML/CSS), communicating via WebSocket.",
+        "dev_p3": "Supported task progress reporting to the Japanese client in Japanese at weekly meetings.",
+        "ai_title": "Project 2 (in parallel, client-requested): AI-Driven Development Automation",
+        "ai_p1": "Researched and introduced Devin AI to the team, building a framework that generates detail design documents and source code for the backend server, web UI and Visual Basic client.",
+        "ai_p2": "Designed the framework to reduce AI hallucination and keep the output consistent with project standards.",
+        "ai_p3": "Cut Detail Design + PG time for complex tasks from ~10 to ~4 days (including review), reducing effort by ~60%.",
+        "lead_title": "Associate Leader",
+        "lead_p1": "Helped establish the process for a newly formed team, creating Detail Design, PG, UT and FT checklists that eliminated recurring mistakes such as document formatting errors and missed precondition checks before testing.",
+        "lead_p2": "Drafted task estimates and WBS, identifying and factoring in hidden effort such as meetings, repeated review-fix rounds and partial allocation (e.g., 0.8 instead of 1.0).",
+        "lead_p3": "Discovered that members' hidden overtime came from estimates omitting effort for two review rounds; confirmed the same issue in other sub-teams and proposed a team-wide fix to the estimation process, noticeably reducing hidden overtime on subsequent tasks.",
+        "lead_p4": "Managed the progress of 1–2 members with no missed deadlines, and supported the PM in reporting the team's overall progress to the client."
+      }
+    },
     "nia": {
       "company": "Startup: NiaColor - E-commerce Platform",
       "date": "07/2025 - {{now}}",
@@ -22,7 +42,7 @@
       "date": "5/2023 - 7/2025",
       "role": "Software Engineer",
       "roles": {
-        "dev_title": "Web Application Development",
+        "dev_title": "Web Application Development (Insurance)",
         "dev_p1": "Responsible for developing and maintaining web applications for both backend and frontend.",
         "dev_p2": "Ensured performance and scalability.",
         "dev_p3": "Refined and optimized code to enhance application performance.",
@@ -34,7 +54,7 @@
         "test_p3": "Developed and maintained automated test scripts using Robot Framework.",
         "test_p4": "Collaborated with the development team to identify, report, and verify software defects.",
 
-        "vba_title": "VBA System Maintenance Support",
+        "vba_title": "VBA System Maintenance Support (Water Billing & Japanese Local Tax)",
         "vba_p1": "Collaborated on optimizing VBA code and rebuilt Access-style UI in VBA.",
         "vba_p2": "Adapted VBA functions for Visual Basic compatibility.",
         "vba_p3": "Maintained Visual Basic code to support the migration from Internet Explorer to Microsoft Edge.",
