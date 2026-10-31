@@ -2,6 +2,15 @@
   "work": {
     "title_page": "職歴",
     "technologies-used": "使用技術",
+    "portfolio": {
+      "company": "ポートフォリオサイト（個人プロジェクト）",
+      "role": "フロントエンドデベロッパー",
+      "roles": {
+        "p1": "ReactJS + Viteで個人ポートフォリオサイトを設計・開発。react-i18nextにより3言語（ベトナム語・英語・日本語）に対応。",
+        "p2": "データと表示を分離し、コンポーネントを再利用することで、Webサイトと同じデータから職務経歴書（PDF）を出力可能に。",
+        "p3": "ソースコード：<a href='https://github.com/HiAmNear/my-portfolio' target='_blank' class='url-text hover'>GitHub: HiAmNear/my-portfolio</a>"
+      }
+    },
     "dxc": {
       "company": "DXC TECHNOLOGY SERVICES VIETNAM",
       "date": "2025年12月 - {{now}}",

@@ -2,6 +2,15 @@
   "work": {
     "title_page": "Work Experience",
     "technologies-used": "Technologies Used",
+    "portfolio": {
+      "company": "Portfolio Website (Personal Project)",
+      "role": "Frontend Developer",
+      "roles": {
+        "p1": "Designed and built a personal portfolio website with ReactJS + Vite, supporting 3 languages (Vietnamese / English / Japanese) via react-i18next.",
+        "p2": "Separated data from presentation and reused components, allowing the CV PDF to be exported directly from the same data source as the website.",
+        "p3": "Source code: <a href='https://github.com/HiAmNear/my-portfolio' target='_blank' class='url-text hover'>GitHub: HiAmNear/my-portfolio</a>"
+      }
+    },
     "dxc": {
       "company": "DXC TECHNOLOGY SERVICES VIETNAM",
       "date": "12/2025 - {{now}}",

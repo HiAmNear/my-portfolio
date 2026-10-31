@@ -2,6 +2,15 @@
   "work": {
     "title_page": "Kinh Nghiệm Làm Việc",
     "technologies-used": "Công Nghệ Áp Dụng",
+    "portfolio": {
+      "company": "Website Portfolio (Dự án cá nhân)",
+      "role": "Frontend Developer",
+      "roles": {
+        "p1": "Thiết kế và phát triển website portfolio cá nhân bằng ReactJS + Vite, hỗ trợ 3 ngôn ngữ (Việt / Anh / Nhật) với react-i18next.",
+        "p2": "Tách dữ liệu khỏi giao diện và tái sử dụng component, cho phép xuất CV PDF trực tiếp từ cùng nguồn dữ liệu với website.",
+        "p3": "Mã nguồn: <a href='https://github.com/HiAmNear/my-portfolio' target='_blank' class='url-text hover'>GitHub: HiAmNear/my-portfolio</a>"
+      }
+    },
     "dxc": {
       "company": "DXC TECHNOLOGY SERVICES VIỆT NAM",
       "date": "12/2025 - {{now}}",

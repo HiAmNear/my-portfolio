@@ -91,6 +91,26 @@ export const workData = [
       "MS Access",".NET","HOS.net","OpenCV","CNN"
     ]
   },
+  {
+    id: "portfolio",
+    company: "work.portfolio.company",
+    date: "11/2025",
+    primaryRole: "work.portfolio.role",
+    roles: [
+      {
+        id: "portfolio-dev",
+        title: null,
+        points: [
+          "work.portfolio.roles.p1",
+          "work.portfolio.roles.p2",
+          "work.portfolio.roles.p3"
+        ]
+      }
+    ],
+    technologies: [
+      "ReactJS", "Vite", "react-i18next", "React Router", "SCSS", "ESLint"
+    ]
+  },
   //   {
   //     id: "nia-color",
   //     company: "work.nia.company",

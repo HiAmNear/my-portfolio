@@ -23,8 +23,7 @@ export const overviewData = {
             "C++",          // DXC - backend server
             "Java",         // DXC - web
             "Visual Basic / VBA",
-            // "HTML / CSS / SCSS", // SCSS dùng cho NiaColor
-            "HTML / CSS",
+            "HTML / CSS / SCSS",
             "PostgreSQL",
             "Git / GitHub",
             "Docker",
@@ -64,13 +63,13 @@ export const overviewData = {
         {
         title: "overview.skills.web",
         items: [
-            // "ReactJS + Vite", // NiaColor
-            // "react-i18next", // NiaColor
+            "ReactJS + Vite",
+            "react-i18next",
             "Django",
             // "Unit Testing", // là quy trình (process), không phải công cụ
             "Robot Framework (Testing)",
             "Pylint / JSLint",
-            // "ESLint", // chưa có dự án minh chứng
+            "ESLint",
             "WebSocket",
             "GrapeCity Spread / InputMan",
         ]
