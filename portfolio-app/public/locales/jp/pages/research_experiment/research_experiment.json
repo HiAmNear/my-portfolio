@@ -17,7 +17,7 @@
     },
     "viisa": {
       "title": "ViISA: A Novel Benchmark for Implicit Sentiment Analysis in Vietnamese",
-      "date": "2024年12月 - 2025年7月",
+      "date": "12/2024 - 7/2025",
       "desc_1": "ベトナム語の潜在感情分析のための新しいリソースであるViISAデータセット(<a href='https://huggingface.co/HiAmNear/ViISA' target='_blank' class='url-text hover'>Hugging Face: HiAmNear/ViISA</a>)の主要作成者。",
       "desc_2": "ニュース記事(tuoitre.com)のクローリング、意味的チャンキング(underthesea使用)、および候補フィルタリングを行うデータパイプラインを構築。",
       "desc_3": "LLM(GPT-4, Gemini-Flashなど)を活用した多段階のAI支援ラベリングワークフローを開発し、9,000以上のデータサンプルにアノテーションを実施。",
